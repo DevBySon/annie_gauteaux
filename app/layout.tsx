@@ -5,6 +5,7 @@ import React from "react";
 import {roboto} from "@/assets/fonts";
 import {cn} from "@/lib/utils";
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -17,6 +18,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         <body className={cn(roboto.className)}>
         <Header/>
         {children}
+        <Footer/>
         </body>
         </html>
     )
