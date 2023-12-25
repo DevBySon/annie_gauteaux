@@ -25,7 +25,6 @@ const NavItem = ({active, children, ...rest}: { active: boolean, children: React
 
 const NavBar = () => {
     const segment = useSelectedLayoutSegment()
-    console.log(segment)
    return (
        <div className="flex items-center gap-4">
            {menuLinks.map((menuItem, index) => (

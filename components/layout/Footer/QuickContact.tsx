@@ -21,7 +21,7 @@ export const QuickContact = () => {
                     <span className={cn(raleway.className, "text-xl font-semibold")}>{info.title}</span>
                     <div className="flex flex-col gap-2">
                         {info.content.map((el, index) => (
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-2" key={index}>
                                 {info.icon ? info.icon[index] : ""}
                                 <span className={cn(roboto.className, "font-normal text-base")}>{el}</span>
                             </div>

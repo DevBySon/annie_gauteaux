@@ -1,7 +1,11 @@
-import Image from 'next/image'
+import Header from "@/components/page/home/Header";
+import QuickInsight from "@/components/page/home/QuickInsight";
 
 export default function Home() {
-  return (
-    <div>Hello world!</div>
-  )
+    return (
+        <div>
+            <Header/>
+            <QuickInsight/>
+        </div>
+    )
 }
