@@ -9,7 +9,7 @@ import {useSelectedLayoutSegment} from "next/navigation";
 const menuLinks = [
     {links: "./", title: "Home"},
     {links: './menu', title: "Menu"},
-    {links: './about', title: "About"}
+    {links: './About', title: "About"}
 ]
 
 const NavItem = ({active, children, ...rest}: { active: boolean, children: ReactNode } & LinkProps) => {

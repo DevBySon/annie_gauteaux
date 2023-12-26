@@ -9,7 +9,7 @@ const storeInformation = [
     {title : "Liên hệ", content : ["cskh@annie.com.vn", "093.501.6564"], icon : [<MailIcon/>, <PhoneIcon/>]},
 ]
 
-export const QuickContact = () => {
+export const Contact = () => {
     return (
         <div className="grid grid-cols-4 gap-14 max-w-screen-xl mx-auto w-full pb-8 pt-16">
             <div className="flex flex-col items-center gap-[10px]">
