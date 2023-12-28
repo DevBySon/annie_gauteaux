@@ -28,3 +28,23 @@ export const Logo = (props: SVGProps<SVGSVGElement>) => (
             stroke="black" strokeWidth="2"/>
     </svg>
 )
+
+export const NotFoundDecoration = (props: SVGProps<SVGSVGElement>) => (
+    <svg 
+        width="689" 
+        height="81" 
+        viewBox="0 0 689 81" 
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        {...props}
+    >
+        <path d="M-43 74.5093C-43 74.5093 40.5 39.0093 98.5 59.0092C156.5 79.0092 259 82.5093 301 64.5093C343 46.5093 392.5 28.5092 438 28.0092C483.5 27.5092 586.5 47.5093 580.5 35.0092" stroke="black" strokeWidth="8"/>
+        <rect x="643" y="1.5" width="44" height="49" rx="9.5" stroke="black" strokeWidth="3"/>
+        <circle cx="664.5" cy="25" r="13.5" stroke="black" strokeWidth="3"/>
+        <circle cx="664.5" cy="20" r="2" fill="black"/>
+        <circle cx="664.5" cy="30" r="2" fill="black"/>
+        <line x1="628.192" y1="23.4926" x2="615.192" y2="24.4926" stroke="#333333" strokeWidth="5"/>
+        <line x1="630.178" y1="38.4936" x2="616.178" y2="39.4936" stroke="#333333" strokeWidth="5"/>
+        <path d="M595.831 54.7353C584.832 55.7487 575.093 47.6538 574.08 36.6547C573.067 25.6556 581.162 15.9175 592.161 14.904L615.126 12.788L618.796 52.6192L595.831 54.7353Z" fill="black"/>
+    </svg>
+)

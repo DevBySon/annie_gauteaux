@@ -1,6 +1,8 @@
 import Header from "@/components/page/home/Header";
 import QuickInsight from "@/components/page/home/QuickInsight";
 import QuickContact from "@/components/layout/QuickContact";
+import Footer from "@/components/layout/Footer";
+import React from "react";
 
 export default function Home() {
     return (
@@ -8,6 +10,7 @@ export default function Home() {
             <Header/>
             <QuickInsight/>
             <QuickContact/>
+            <Footer/>
         </div>
     )
 }
