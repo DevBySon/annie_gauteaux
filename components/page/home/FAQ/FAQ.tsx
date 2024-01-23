@@ -10,7 +10,7 @@ interface FAQ {
 
 const fetchFAQ = async (): Promise<FAQ[]> => {
     try {
-        const response = await fetch(process.env.URL + '/api/faq');
+        const response = await fetch(process.env.URL + '/api/faq', {cache: "no-store"});
         return await response.json()
     } catch (error) {
         console.error('Error fetching data:', error)
@@ -20,7 +20,6 @@ const fetchFAQ = async (): Promise<FAQ[]> => {
 
 export const FAQ = async () => {
     const data = await fetchFAQ();
-    console.log(data)
     return (
         <div className="bg-slate-50">
             <div className="max-w-screen-lg mx-auto flex flex-col items-center gap-8 py-16">

@@ -15,8 +15,8 @@ const menuLinks = [
 const NavItem = ({active, children, ...rest}: { active: boolean, children: ReactNode } & LinkProps) => {
     return (
         <Link className={cn(
-            `relative p-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-transform
-            after:content-[''] after:bg-black after:w-full after:scale-x-0 hover:after:scale-x-100 font-medium text-black`
+            `relative px-2 my-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:transition-transform
+            after:bg-black after:w-full after:scale-x-0 hover:after:scale-x-100 font-medium text-black`
         )}{...rest}>
             {children}
         </Link>
