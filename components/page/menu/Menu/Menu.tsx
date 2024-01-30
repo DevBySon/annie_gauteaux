@@ -1,7 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {raleway} from "@/assets/fonts";
 import {cn} from "@/lib/utils";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 interface Cake {
     name: string;
