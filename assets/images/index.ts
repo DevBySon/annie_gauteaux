@@ -1,0 +1,1 @@
+export { default as BgHeaderAbout} from "./header-bg-about.png"

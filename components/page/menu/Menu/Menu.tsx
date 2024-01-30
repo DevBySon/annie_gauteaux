@@ -22,7 +22,7 @@ const fetchMenu = async (): Promise<Cake[]> => {
 }
 
 
-export const Menu = async () => {
+export const Menu = async ({ctg} : {ctg: string | null}) => {
     const data = await fetchMenu();
 
     // Group cake by category
@@ -37,7 +37,7 @@ export const Menu = async () => {
 
     return (
         <div className="max-w-screen-lg mx-auto">
-            <Tabs defaultValue={categories[0]} className="w-full">
+            <Tabs defaultValue={ctg ?? categories[0]} className="w-full">
                 <TabsList className="w-full justify-center gap-2 my-8">
                     {categories.map((category, index) => (
                         <TabsTrigger
@@ -56,7 +56,7 @@ export const Menu = async () => {
                             {groupedCakes[category].map((cake : Cake, index : number) => (
                               <div key={index} className="flex flex-col items-center p-4 gap-4 hover:shadow-xl cursor-pointer">
                                   <div className="relative aspect-square w-full">
-                                      <Image src={cake.image} alt={cake.name} fill objectFit="contain" className="py-10"/>
+                                      <Image src={cake.image} alt={cake.name} layout="fill" objectFit="contain" className="py-10"/>
                                   </div>
                                   <div className="flex flex-col w-full">
                                       <span className={cn(raleway.className, "text-[22px] leading-[181%] font-semibold")}>

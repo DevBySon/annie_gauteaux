@@ -2,6 +2,7 @@ import Image from "next/legacy/image";
 import {raleway} from "@/assets/fonts";
 import {cn} from "@/lib/utils";
 import {LongArrowRight} from "@/assets/svg";
+import Link from "next/link";
 
 interface Category {
     id: number;
@@ -17,7 +18,7 @@ const fetchCategories = async (): Promise<Category[]> => {
     } catch (error) {
         console.error('Error fetching data:', error);
         throw error;
-    }``
+    }
 }
 
 export const Categories = async () => {
@@ -27,14 +28,19 @@ export const Categories = async () => {
             {data.map((category, index) => (
                 <div className={`flex items-stretch gap-4 ${index % 2 !== 0 ? "flex-row-reverse" : ""}`} key={index}>
                     <div className="relative w-64">
-                        <Image src={category.image} alt={category.name} fill style={{objectFit: "contain"}}/>
+                        <Image src={category.image} alt={category.name} style={{objectFit: "contain"}} layout="fill" priority/>
                     </div>
                     <div className={`flex flex-col gap-4 flex-1 ${index % 2 !== 0 ? "text-right items-end" : ""}`}>
                         <h4 className={cn(raleway.className, "text-[34px] leading-relaxed font-semibold")}>
                             {category.name}
                         </h4>
                         <span className={cn(raleway.className, "leading-loose")}>{category.description}</span>
-                        <LongArrowRight className={`${index % 2 !== 0 ? "rotate-180" : ""} cursor-pointer`}/>
+                        <Link href={{
+                            pathname: "/menu",
+                            query: {ctg: category.name}
+                        }}>
+                            <LongArrowRight className={`${index % 2 !== 0 ? "rotate-180" : ""} cursor-pointer`}/>
+                        </Link>
                     </div>
                 </div>
             ))}

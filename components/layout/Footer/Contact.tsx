@@ -6,7 +6,7 @@ import {MailIcon, PhoneIcon} from "@/components/layout/Footer/common";
 const storeInformation = [
     {title : "Giờ mở cửa", content : ["Thứ 2 - thứ 6: 7h30 - 21h30", "Thứ 7 & Chủ nhật: 7h30 - 14h"]},
     {title : "Địa chỉ", content : ["14 Lê Văn Lương, Trung Hoà, Cầu Giấy, Hà Nội"]},
-    {title : "Liên hệ", content : ["cskh@annie.com.vn", "093.501.6564"], icon : [<MailIcon/>, <PhoneIcon/>]},
+    {title : "Liên hệ", content : ["cskh@annie.com.vn", "093.501.6564"], icon : [<MailIcon key={1}/>, <PhoneIcon key={2}/>]},
 ]
 
 export const Contact = () => {
