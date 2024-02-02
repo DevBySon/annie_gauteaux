@@ -1,9 +1,7 @@
 import type {Metadata} from 'next'
 import './globals.css'
-import React from "react";
 import {roboto} from "@/assets/fonts";
 import {cn} from "@/lib/utils";
-import Header from "@/components/layout/Header";
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -14,8 +12,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html lang="en">
         <body className={cn(roboto.className)}>
-        <Header/>
-        <main className="flex-grow pt-[52px]">{children}</main>
+        <main>{children}</main>
         </body>
         </html>
     )

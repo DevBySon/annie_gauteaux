@@ -1,4 +1,4 @@
-import {NotFoundDecoration} from "@/assets/svg";
+ import {NotFoundDecoration} from "@/assets/svg";
 import {raleway} from "@/assets/fonts";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
