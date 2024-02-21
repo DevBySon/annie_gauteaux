@@ -5,6 +5,10 @@ import Link, {LinkProps} from "next/link";
 import {cn} from "@/lib/utils";
 import {CartIcon} from "@/assets/svg";
 import {useSelectedLayoutSegment} from "next/navigation";
+import {Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger} from "@/components/ui/sheet"
+import {raleway} from "@/assets/fonts";
+import {Separator} from "@/components/ui/separator";
+import {Button} from "@/components/ui/button";
 
 const menuLinks = [
     {links: "./", title: "Home"},
@@ -32,9 +36,33 @@ const NavBar = () => {
                     {menuItem.title}
                 </NavItem>
            ))}
-           <NavItem active={false} href="/cart">
-               <CartIcon/>
-           </NavItem>
+               <Sheet>
+                   <SheetTrigger><CartIcon/></SheetTrigger>
+                   <SheetContent className="bg-white">
+                       <SheetHeader>
+                           <SheetTitle className={cn(raleway.className, "text-[22px] font-semibold leading-[181%]")}>
+                               Giỏ hàng
+                           </SheetTitle>
+                           <SheetDescription>
+                               <Separator className="my-8 mb-1 bg-slate-300"/>
+                               This action cannot be undone. This will permanently delete your account
+                               and remove your data from our servers.
+                               <Separator className="mb-8 mt-1 bg-slate-300"/>
+                               <div className="flex items-center justify-between">
+                                   <p className={cn(raleway.className, "text-[20px] leading-[181%] font-semibold")}>
+                                       Tạm tính
+                                   </p>
+                                   <p>đ</p>
+                               </div>
+                               <Button className={"mt-16 mx-2 w-full p-2"}>
+                                   <Link href="#" className={cn(raleway.className, "text-[20px] leading-[181%]")}>
+                                        Thanh toán
+                                   </Link>
+                               </Button>
+                           </SheetDescription>
+                       </SheetHeader>
+                   </SheetContent>
+               </Sheet>
        </div>
    )
     }
